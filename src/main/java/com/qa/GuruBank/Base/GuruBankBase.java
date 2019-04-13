@@ -17,11 +17,13 @@ public class GuruBankBase {
 	public static WebDriver driver;
 	public static Properties prop;
 	
+	
+	
 	public GuruBankBase(){
 		prop=new Properties() ;
 			FileInputStream IN;
 			try {
-				IN = new FileInputStream("C:\\Users\\ghadeermoh\\eclipse-workspace\\GuruBank\\src\\main\\java\\com\\qa\\GuruBank\\TestData\\ConfigData");
+				IN = new FileInputStream("C:\\Users\\ghadeermoh\\eclipse-workspace\\GuruBank\\src\\main\\java\\com\\qa\\Configuration\\ConfigData");
 				prop.load(IN);
 			}catch (FileNotFoundException e) {
 				e.printStackTrace();
@@ -47,6 +49,8 @@ public class GuruBankBase {
 		driver.get(prop.getProperty("url"));
 		
 	}
+	
+	
 	
 
 }

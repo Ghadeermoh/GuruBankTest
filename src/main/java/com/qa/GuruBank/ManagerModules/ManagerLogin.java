@@ -39,6 +39,11 @@ public class ManagerLogin extends GuruBankBase {
 		Loginbtn.click();
 			
 		}
+	public void ValidatLoginWithUNandPass() {
+		UserID.sendKeys(prop.getProperty("username"));
+		Pass.sendKeys(prop.getProperty("password"));
+		Loginbtn.click();
+	}
 	public void CopyAlertMessage() {
 		aler=driver.switchTo().alert();
 		String Alertmessage =aler.getText();

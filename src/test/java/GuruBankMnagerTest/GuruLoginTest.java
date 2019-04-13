@@ -11,6 +11,8 @@ import com.qa.GuruBank.Utility.Utilit;
 
 public class GuruLoginTest extends GuruBankBase{
 	public ManagerLogin managlogin;
+	public static String LoginDataPath ="C:\\Users\\ghadeermoh\\eclipse-workspace\\GuruBank\\src\\main\\java\\com\\qa\\TestData\\GuruTestData.xlsx";
+	
 	
 	public GuruLoginTest() {
 		super();
@@ -18,7 +20,7 @@ public class GuruLoginTest extends GuruBankBase{
 	
 	@DataProvider 
 	public Object[][] GetTestData(){
-		Object data [][] =Utilit.GetTestData("GuruTestData");
+		Object data [][] =Utilit.GetTestData("GuruTestData" ,LoginDataPath);
 		return data;
 		
 	}

@@ -28,9 +28,9 @@ public class Utilit extends GuruBankBase {
 	//***********************Data provide 
 	public static Workbook book;
 	public static Sheet sheet;
-	public static String TESTDATA_SHEET_PATH="C:\\Users\\ghadeermoh\\eclipse-workspace\\GuruBank\\src\\main\\java\\com\\qa\\GuruBank\\TestData\\GuruTestData.xlsx";
 	
-	public static  Object[][] GetTestData( String SheetName) {
+	
+	public static  Object[][] GetTestData( String SheetName ,String TESTDATA_SHEET_PATH) {
 		
 		FileInputStream file = null;
 		try {

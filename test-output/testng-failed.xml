@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="GuruBankMnagerTest.GuruLoginTest">
+      <class name="GuruBankMnagerTest.CreateNewCstTest">
         <methods>
-          <include name="LoginTest"/>
-          <include name="teardown"/>
           <include name="setup"/>
+          <include name="teardown"/>
+          <include name="NewCstCreateTest"/>
         </methods>
-      </class> <!-- GuruBankMnagerTest.GuruLoginTest -->
+      </class> <!-- GuruBankMnagerTest.CreateNewCstTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
