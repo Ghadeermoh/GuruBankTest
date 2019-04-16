@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [GuruBank99Test]">
+  <listeners>
+    <listener class-name="com.qa.ExtentReportListner.ExtentReport"/>
+  </listeners>
+  <test name="Guru bank 99 test (failed)" preserve-order="false">
+    <classes>
+      <class name="GuruBankMnagerTest.CreateNewCstTest">
+        <methods>
+          <include name="setup"/>
+          <include name="teardown"/>
+          <include name="NewCstCreateTest" invocation-numbers="0"/>
+        </methods>
+      </class>
+      <class name="GuruBankMnagerTest.GuruLoginTest">
+        <methods>
+          <include name="LoginTest" invocation-numbers="1 2"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+        </methods>
+      </class>
+    </classes>
+  </test>
+</suite>

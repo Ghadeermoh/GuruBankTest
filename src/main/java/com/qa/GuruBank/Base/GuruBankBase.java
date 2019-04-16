@@ -19,6 +19,8 @@ public class GuruBankBase {
 	
 	
 	
+	
+	
 	public GuruBankBase(){
 		prop=new Properties() ;
 			FileInputStream IN;

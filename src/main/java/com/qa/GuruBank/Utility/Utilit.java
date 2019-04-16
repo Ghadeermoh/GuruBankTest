@@ -1,14 +1,18 @@
 package com.qa.GuruBank.Utility;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-
+import org.apache.commons.io.FileUtils;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -17,10 +21,10 @@ import com.qa.GuruBank.Base.GuruBankBase;
 public class Utilit extends GuruBankBase {
 	
 	public static int Page_Load_TimeOut=40;
-	public static int Implicit_Wait=40;
-	public static int FlashNum=20;
+	public static int Implicit_Wait=60;
+	public static int FlashNum=10;
 	public static JavascriptExecutor js  = ((JavascriptExecutor)driver);
-	
+	public static Alert aler ;
 	public void SwitchFrame() {
 		driver.switchTo().frame("mainpanel");
 	}
@@ -99,5 +103,22 @@ public class Utilit extends GuruBankBase {
 		return PageText;
 	}
 	
-
-}
+//***************Alert pop up messages 
+	public static String  PopUpAlertMessage() {
+		Alert aler=driver.switchTo().alert();
+		String alertmessage=aler.getText();
+		aler.accept();
+		return alertmessage;
+	}
+	
+//**********screen shot
+	public static void ScreenShot() {
+		File scrfile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		try {
+			FileUtils.copyFile(scrfile, new File("C:\\Users\\ghadeermoh\\eclipse-workspace\\GuruBank\\ScreenShots.png"));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	        }
+	}
+	
